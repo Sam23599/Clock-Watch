@@ -1,10 +1,12 @@
-*{
+/* Reset default margin, padding, and font */
+* {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.container{
+/* Styling for the main container */
+.container {
     background-color: #222242;
     height: 100vh;
     width: 100%;
@@ -12,14 +14,16 @@
     position: absolute;
 }
 
-.wrapper{
+/* Styling for the main content */
+.main {
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.wrapper p{
+/* Styling for paragraphs within .main */
+.main p {
     position: relative;
     display: inline-block;
     color: white;
@@ -28,7 +32,8 @@
     margin-bottom: 120px;
 }
 
-.wrapper p::before{
+/* Pseudo-element for decorative circle */
+.main p::before {
     content: '';
     position: absolute;
     width: 270px;
@@ -38,19 +43,21 @@
     border-radius: 50%;
     left: -10%;
     top: -215%;
-    animation: light 2s infinite ;
+    animation: light 2s infinite;
 }
 
+/* Keyframes animation for the decorative circle */
 @keyframes light {
-    0%,100%{
+    0%, 100% {
         box-shadow: 0 0 25px -10px;
     }
-    50%{
+    50% {
         box-shadow: 0 0 30px 2px;
     }
 }
 
-button{
+/* Styling for buttons */
+button {
     background-color: inherit;
     padding: 10px 30px;
     border: 1px solid whitesmoke;
@@ -60,11 +67,13 @@ button{
     font-size: 20px;
 }
 
-button:not(:last-child){
+/* Styling for buttons except the last one */
+button:not(:last-child) {
     margin-right: 20px;
 }
 
-button:hover, button:focus{
+/* Button hover and focus styles */
+button:hover{
     cursor: pointer;
     border-color: antiquewhite;
     color: antiquewhite;
